@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start:init": "babel src -d lib && babel data -d lib",
-    "start:run": "babel src -d lib && babel data -d lib && node lib/parens-B-Gone.js",
+    "start:run": "babel src -d lib && babel data -d lib && node lib/finiteStateGate.js",
     "test": "mocha --compilers js:babel-register ./tests/*.js"
   },
   "repository": {

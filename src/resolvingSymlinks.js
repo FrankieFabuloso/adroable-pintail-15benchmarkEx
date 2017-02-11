@@ -1,4 +1,3 @@
-import readline from 'readline'
 import fs from 'fs'
 
 const a = fs.readFileSync('data/symlink','utf8')
