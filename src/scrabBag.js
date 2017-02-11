@@ -1,10 +1,13 @@
 import scrabbleData from '../data/scrabbleData'
 import readlineSync from 'readline-sync'
 
-const filterWords = (scrabbleSting) => {
+const updateUsedScrabTiles = (scrabbleSting) => {
+  let myScrableData = scrabbleData
+  scrabbleSting = scrabbleSting.toUpperCase()
   for( let letter of scrabbleSting ){
     scrabbleData[`${letter}`] -= 1
   }
+  return scrabbleData
 }
 
 const sortAllLettersByCount = () => {
@@ -18,13 +21,14 @@ const sortAllLettersByCount = () => {
       + `, ${letter}`
     }
   }
-  console.log('reverseHash:', reverseHash)
+  return reverseHash
 }
 
-// ----- program start ----
-console.log('Enter a set of Scrabble tiles')
-let enteredScrabSting = readlineSync.question('\t---->: ')
-enteredScrabSting = enteredScrabSting.toUpperCase()
-filterWords(enteredScrabSting)
+// ----- program start for a readlineSync ----
+// console.log('Enter a set of Scrabble tiles')
+// let enteredScrabSting = readlineSync.question('\t---->: ')
+// updateUsedScrabTiles(enteredScrabSting)
+//
+// sortAllLettersByCount(enteredScrabSting)
 
-sortAllLettersByCount(enteredScrabSting)
+export { updateUsedScrabTiles, sortAllLettersByCount }
