@@ -1,5 +1,5 @@
 
-const tarverseAndHash = string =>{
+const findStringAlong = string =>{
   const substringHash = []
   let keyPointer = 0
   let valuePointer = 0
@@ -27,11 +27,10 @@ const tarverseAndHash = string =>{
       valuePointer++
     }
   }
-  console.log('substringHash:', substringHash)
-  findLongestSubstring(substringHash)
+  return findLongestStringAlong(substringHash)
 }
 
-const findLongestSubstring = ( hash ) => {
+const findLongestStringAlong = ( hash ) => {
   let maxLength = 0
   let longestString = ''
   for( let index in hash ){
@@ -40,10 +39,8 @@ const findLongestSubstring = ( hash ) => {
       longestString = hash[index]
     }
   }
-  console.log('longestString:', longestString)
   return longestString
 
 }
 
-tarverseAndHash('ghhiiii')
-tarverseAndHash('efgefghiiikk')
+export {findLongestStringAlong, findStringAlong}

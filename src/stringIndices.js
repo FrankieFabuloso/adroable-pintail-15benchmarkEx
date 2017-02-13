@@ -13,7 +13,6 @@ const arrayify = ( sentance ) => {
     } else {
       arrayedSentance[index] += letter
     }
-    console.log('letter:', letter)
   }
   console.log('arrayedSentance:', arrayedSentance)
   return arrayedSentance

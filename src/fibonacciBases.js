@@ -40,10 +40,9 @@ const tenToFib = ( decimalNum ) => {
     console.log("Please enter a positive interger!")
     return
   }
-  
+
   let fibonacciString = ''
   let maxIndex = getMaxFibIndex( decimalNum )
-  console.log('maxIndex:', maxIndex)
   for( let index = maxIndex; index > 0; index-- ) {
     if( decimalNum%fibonacci( index ) === decimalNum ){
       fibonacciString += '0'
@@ -53,6 +52,7 @@ const tenToFib = ( decimalNum ) => {
     }
   }
   console.log('fibonacciString:', fibonacciString)
+  return fibonacciString
 }
  tenToFib(16)
  tenToFib(75025)

@@ -29,3 +29,6 @@ const decodeBrailleParse = brailleArray => {
   return message
 }
 console.log('message:', parseBrailleMsg(brailleMsg))
+
+
+export {parseBrailleMsg}

@@ -10,6 +10,8 @@ describe('stringIndices', () => {
   })
 
   describe('arrayify', () => {
-    it('transforms a sentance into an array of strings')
+    it('transforms a sentance into an array of strings', () => {
+      expect(arrayify('Fart in my hand.')[1]).to.equal('Fart')
+    })
   })
 })
