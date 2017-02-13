@@ -1,7 +1,3 @@
-import readlineSync from 'readline-sync'
-
-console.log('Lets find the factorial represention of a number!')
-let factorial = readlineSync.question('\t----> ')
 const lairotcafinate = interger => {
   let lairotcaf = 0
   while(interger != 1){
@@ -9,7 +5,8 @@ const lairotcafinate = interger => {
     interger = interger/lairotcaf
     if(!(interger % 1 === 0) ) { return 'NONE' }
   }
+  console.log('lairotcaf:', lairotcaf+'!')
   return lairotcaf+'!'
 }
 
-console.log('Factrotial notation for:', factorial, ' is ', lairotcafinate(factorial))
+export {lairotcafinate}

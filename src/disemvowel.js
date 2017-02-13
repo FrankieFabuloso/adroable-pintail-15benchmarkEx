@@ -13,3 +13,5 @@ const disemvowel = ( string ) => {
 }
 
 disemvowel('i am groot')
+
+export {disemvowel}

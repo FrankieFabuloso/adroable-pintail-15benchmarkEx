@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync'
 
 const arrayify = ( sentance ) => {
   let arrayedSentance = []
@@ -14,12 +13,9 @@ const arrayify = ( sentance ) => {
     } else {
       arrayedSentance[index] += letter
     }
-    console.log('letter:', letter)
   }
   console.log('arrayedSentance:', arrayedSentance)
   return arrayedSentance
 }
 
-const myArrayedSentance = arrayify( "FARTS ARE SMELL" )
-
-console.log('myArrayedSentance[1]:', myArrayedSentance[1])
+export {arrayify}
