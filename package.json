@@ -1,0 +1,31 @@
+{
+  "name": "adroable-pintail-15benchmark",
+  "version": "1.0.0",
+  "description": "Benchmark goals are projects that are designed to be done solo. (#114)",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
+    "chai": "^3.5.0",
+    "chai-change": "^2.1.2",
+    "readline-sync": "^1.4.6"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "start:init": "babel src -d lib && babel data -d lib",
+    "start:run": "babel src -d lib && babel data -d lib && node lib/finiteStateGate.js",
+    "test": "mocha --compilers js:babel-register ./tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankieFabuloso/adroable-pintail-15benchmarkEx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrankieFabuloso/adroable-pintail-15benchmarkEx/issues"
+  },
+  "homepage": "https://github.com/FrankieFabuloso/adroable-pintail-15benchmarkEx#readme"
+}
